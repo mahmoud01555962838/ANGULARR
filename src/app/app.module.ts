@@ -8,11 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {RatingModule} from 'ng-starrating';
+import { SearchComponent } from './search/search.component';
+import { TagsComponent } from './tags/tags.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
