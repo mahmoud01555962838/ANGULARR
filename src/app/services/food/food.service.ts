@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Foods } from 'src/app/shared/models/food';
 @Injectable({
   providedIn: 'root'
 })
@@ -7,16 +7,96 @@ export class FoodService {
 
   constructor() { }
 
-  getAll():string[]{
+  getAll():Foods[]{
     return [
-      '/assets/food-1.jpg',
-      '/assets/food-2.jpg',
-      '/assets/food-3.jpg',
-      '/assets/food-4.jpg',
-      '/assets/food-5.jpg',
-      '/assets/food-6.jpg',
-      '/assets/food-7.jpg',
-      '/assets/food-8.jpg',
+      {
+        id:1,
+        name:'Burger1',
+        cookTime:'10-20',
+        price:10,
+        favorite:false,
+        origins:['italy'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-1.jpg',
+        tags:['FastFood','burger','lunch'],
+      },
+      {
+        id:2,
+        name:'shawrma',
+        cookTime:'10-20',
+        price:20,
+        favorite:true,
+        origins:['china','us'],
+        stars:4.7,
+        imageUrl!:'/assets/images/foods/food-2.jpg',
+        tags:['SlowFood','lunch'],
+      },
+      {
+        id:3,
+        name:'potatoes&meat',
+        cookTime:'30-40',
+        price:50,
+        favorite:true,
+        origins:['france','belgium'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-3.jpg',
+        tags:['FastFood','Fry'],
+      },
+      {
+        id:4,
+        name:'Burger2',
+        cookTime:'10-15',
+        price:10,
+        favorite:true,
+        origins:['italy','germany'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-4.jpg',
+        tags:['FastFood','Fry'],
+      },
+      {
+        id:5,
+        name:'Bizzahut',
+        cookTime:'20-40',
+        price:30,
+        favorite:false,
+        origins:['italy','spain'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-5.jpg',
+        tags:['SlowFood','Soup'],
+      },
+      {
+        id:6,
+        name:'Bizzacheese',
+        cookTime:'25-35',
+        price:25,
+        favorite:true,
+        origins:['italy','spain'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-6.jpg',
+        tags:['FastFood','Pizza','lunch'],
+      },
+      {
+        id:7,
+        name:'Pizza',
+        cookTime:'15-25',
+        price:30,
+        favorite:true,
+        origins:['italy','egypt'],
+        stars:4.5,
+        imageUrl!:'/assets/images/foods/food-7.jpg',
+        tags:['FastFood','Pizza','lunch'],
+      },
+      {
+        id:8,
+        name:'Food',
+        cookTime:'15-20',
+        price:15,
+        favorite:true,
+        origins:['china','us'],
+        stars:4.7,
+        imageUrl!:'/assets/images/foods/food-8.jpg',
+        tags:['FastFood','lunch'],
+      },
 
     ]
   }
